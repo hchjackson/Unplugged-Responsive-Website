@@ -103,6 +103,8 @@ body {
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -114,6 +116,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 1.875em;
+  margin: 0;
 }
 
 h3,
@@ -231,9 +234,17 @@ address {
    }
 
    footer .social-icons p {
+     background-color: #527158;
+     border-radius: 50%;
+     width: 40px;
+     height: 40px;
      display: flex;
      justify-content: center;
      align-items: center;
+   }
+
+   footer .social-icons p i {
+     font-size: 1.3125em;
    }
 
    footer .copyright {
@@ -247,11 +258,11 @@ address {
    .hero-area {
      background: url('../img/unplugged-retreat.jpg') center no-repeat #333;
      background-size: cover;
+     min-height: 500px;
+     padding-bottom: 75px;
      display: flex;
      justify-content: center;
      flex-flow: row wrap;
-     min-height: 250px;
-     padding-bottom: 75px;
    }
 
 
@@ -260,7 +271,7 @@ address {
      font-family: 'Poppins', Helvetica, Arial, sans-serif;
      font-weight: 500;
      line-height: 1.2;
-     margin-top: 0;
+/*     margin-top: 0; */
    }
 
    /* Aside */
@@ -331,7 +342,7 @@ address {
      font-size: 3.75em;
      margin-bottom: 40px;
    }
-   
+
    .features p {
      margin: 0;
      text-align: center;
@@ -605,13 +616,16 @@ address {
   }
 
   .features p {
-    margin: 0 60px;
+    margin: 0 60px; /* Fixes spacing around features icons */
   }
 
   .features .features-items-description {
     width: 62%;
   }
 
+.features i {
+  margin-bottom: 30px;
+}
 
   /* Reviews */
   .reviews article {
@@ -637,7 +651,7 @@ address {
   /* Footer */
   footer .content-wrapper {
     width: 65%;
-    margin-left: 100px 0;
+    margin: 100px 0;
   }
 
   footer .footer-content {
@@ -647,9 +661,21 @@ address {
     flex-direction: row;
   }
 
-  footer.contact {
+  footer .contact {
     margin-bottom: 0;
   }
+
+/* Font awesome method for styling icons */
+/*  footer .social {
+    margin-bottom: 50px;
+    margin-left: 40px;
+    margin-right: 0px;
+  }
+
+  footer span {
+    margin-left: 20px;
+    margin-right: 20px;
+  }*/
 
   footer h4 {
     font-size: 1.5em;
@@ -658,6 +684,11 @@ address {
 
   footer p {
     line-height: 1.285;
+  }
+
+  footer .social-icons {
+    width: 12.5em;
+    justify-content: space-between;
   }
 
   footer .copyright {
